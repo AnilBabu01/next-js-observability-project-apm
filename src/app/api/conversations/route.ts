@@ -55,7 +55,9 @@ export async function GET() {
         }
       );
 
-      const data = await response.json();
+      console.log("response",response)
+
+      const data = await response?.json();
 
       // Add useful APM span information
       span?.setOutcome(response.ok ? "success" : "failure");
